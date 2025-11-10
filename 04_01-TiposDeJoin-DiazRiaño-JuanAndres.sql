@@ -2,6 +2,7 @@ USE ejemplos_tipos_join;
 
 -- EJEMPLOS PRACTICOS DE LA GUIA:
 
+-- JOIN: 
 SELECT 
     a.id_alumno, a.nombre, m.id_matricula, m.id_curso
 FROM
@@ -91,7 +92,7 @@ FROM
     matriculas m ON a.id_alumno = m.id_alumno
 WHERE
     m.id_alumno IS NULL
-ORDER BY a.id_alumno
+ORDER BY a.id_alumno;
 
 -- 3)No: Matrículas sin alumno (huérfanas).
 
@@ -204,7 +205,6 @@ HAVING SUM(pa.total_pagado) IS NOT NULL
    AND SUM(pa.total_pagado) < p.coste_total
 ORDER BY total_pagado ASC, pedido ASC;
 
-
 -- 29) Nº de productos distintos comprados por cliente.
 SELECT
   c.nombre AS cliente,
@@ -214,8 +214,6 @@ LEFT JOIN pedidos AS p ON p.id_cliente = c.id_cliente
 LEFT JOIN detalle_pedido AS dp ON dp.id_pedido = p.id_pedido
 GROUP BY c.id_cliente, c.nombre
 ORDER BY productos_distintos DESC, cliente ASC;
-
-
 
 -- 35) Clientes 2025 SIN pedidos aún.
 SELECT
