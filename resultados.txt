@@ -24832,7 +24832,7 @@ customer_id	first_name	last_name	days_between_first_last_2005
 store_id	avg_payment_2006
 1	2.46
 2	3.22
-4534643654654
+
 100:  Para cada categoría, calcula la media de duración (length) de películas alquiladas en 2006 y ordénalas descendentemente por dicha media.
 category_id	category_name	avg_length_rented_2006
 7	Drama	135.0000
